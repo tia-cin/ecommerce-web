@@ -2,8 +2,6 @@ import React from "react";
 import {
   AiFillInstagram,
   AiOutlineTwitter,
-  AiFillAndroid,
-  AiFillApple,
   AiFillFacebook,
   AiFillLinkedin,
 } from "react-icons/ai";

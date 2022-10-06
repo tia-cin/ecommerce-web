@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { urlfFor } from "../lib/client";
+import { urlFor } from "../lib/client";
 
 const FooterBanner = ({
   footerBanner: {
@@ -34,7 +34,7 @@ const FooterBanner = ({
           </Link>
         </div>
         <img
-          src={urlfFor(image)}
+          src={urlFor(image)}
           alt={`product-${product}`}
           className="footer-banner-image"
         />
