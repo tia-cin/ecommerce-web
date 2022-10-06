@@ -1,7 +1,25 @@
 import React from "react";
+import {
+  AiFillInstagram,
+  AiOutlineTwitter,
+  AiFillAndroid,
+  AiFillApple,
+  AiFillFacebook,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div className="footer-container">
+      <p>2022 Ecommerce Store All rights reserved</p>
+      <p className="icons">
+        <AiFillFacebook />
+        <AiFillInstagram />
+        <AiOutlineTwitter />
+        <AiFillLinkedin />
+      </p>
+    </div>
+  );
 };
 
 export default Footer;
