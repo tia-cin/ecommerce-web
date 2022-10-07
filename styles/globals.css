@@ -138,7 +138,7 @@ width: 100%;
 .hero-banner-container button{
    border-radius: 15px;
   padding: 10px 16px;
-  background-color: #f02d34;
+  background-color: #057dcd;
   color: white;
   border: none;
   margin-top: 40px;
@@ -203,7 +203,7 @@ text-align: end;
 }
 .footer-banner-container{
   padding: 100px 40px;
-  background-color: #f02d34;
+  background-color: #057dcd;
   border-radius: 15px;
   position: relative;
   height: 400px;
@@ -220,7 +220,7 @@ text-align: end;
   border-radius: 15px;
   padding: 10px 16px;
   background-color: white;
-  color: red;
+  color: #057dcd;
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -263,7 +263,6 @@ text-align: end;
   right: 0;
   top: 0;
   z-index: 100;
-  /* will-change: transform; */
   transition: all 1s ease-in-out;
 
 }
@@ -394,7 +393,7 @@ padding: 30px 65px;
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #f02d34;
+  background-color: #057dcd;
   color: #fff;
   cursor: pointer;
     transform: scale(1, 1);
@@ -421,7 +420,7 @@ padding: 30px 65px;
   transition: .3s ease-in-out;
 }
 .product-detail-image:hover{
-  background-color: #f02d34;
+  background-color: #057dcd;
 
 }
 .small-images-container{
@@ -438,7 +437,7 @@ padding: 30px 65px;
 }
 
 .selected-image{
-  background-color:#f02d34;
+  background-color:#057dcd;
 }
 .reviews{
   color: #f02d34;
@@ -480,12 +479,12 @@ padding: 30px 65px;
 }
 .buttons .add-to-cart{
   padding: 10px 20px;
-  border: 1px solid #f02d34 ;
+  border: 1px solid #057dcd ;
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
   background-color: white;
-  color: #f02d34;
+  color: #057dcd;
   cursor: pointer;
   width: 200px;
    transform: scale(1, 1);
@@ -498,7 +497,7 @@ padding: 30px 65px;
   width: 200px;
 
   padding: 10px 20px;
-  background-color: #f02d34;
+  background-color: #057dcd;
   color: white;
   border: none;
   margin-top: 40px;
@@ -600,7 +599,7 @@ margin-top: 160px;
 }
 .success .description .email{
   margin-left: 5px;
-  color: #f02d34;
+  color: #057dcd;
 }
 .product-max-qty{
   margin-top: 10px;
