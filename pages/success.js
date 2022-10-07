@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { useStateContext } from "../context/StateContext";
+import { runConfetti } from "../lib/utils";
 
 const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
@@ -12,6 +13,7 @@ const Success = () => {
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
+    runConfetti();
   }, []);
 
   return (
@@ -23,7 +25,7 @@ const Success = () => {
         <h2>Thanks for your order!</h2>
         <p className="email-msg">Check your email for your receipt.</p>
         <p className="description">
-          If any question, please contact us throuh our email
+          If any question, please contact us through our email
           <a className="email" href="mailto:example@mail.com">
             example@mail.com
           </a>
