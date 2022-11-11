@@ -44,19 +44,19 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
-      <div className="cart-container">
-        <button className="cart-heading" onClick={() => setShowCart(false)}>
+    <div className="w-screen bg-opacity-50 bg-black fixed right-0 top-0 transition-all" style={{zIndex: 100}} ref={cartRef}>
+      <div className="h-screen w-600 bg-white float-right px-10 py-2.5 relative">
+        <button className="ml-2.5 flex items-center text-lg font-medium cursor-pointer gap-0.5 bg-transparent" onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
-          <span className="heading">Your Cart</span>
-          <span className="cart-num-items">({totalQuantities} items)</span>
+          <span className="ml-2.5">Your Cart</span>
+          <span className="ml-2.5 text-red-500">({totalQuantities} items)</span>
         </button>
         {cartItems.length < 1 && (
-          <div className="empty-cart">
+          <div className="m-10 text-center">
             <AiOutlineShopping size={150} />
-            <h3>Your cart is empty</h3>
+            <h3 className="font-semibold text-xl">Your cart is empty</h3>
             <Link href="/">
-              <button onClick={() => setShowCart(false)} className="btn">
+              <button onClick={() => setShowCart(false)} className="w-full max-w-sm px-2.5 py-3 rounded-2xl text-xl mt-12 uppercase bg-indigo-600 text-gray-200 font-medium">
                 Continue shopping
               </button>
             </Link>
