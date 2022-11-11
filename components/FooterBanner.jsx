@@ -17,18 +17,18 @@ const FooterBanner = ({
   },
 }) => {
   return (
-    <div className="footer-banner-container">
-      <div className="banner-desc">
+    <div className="pt-24 px-10 bg-indigo-600 rounded-2xl relative h-400 text-white w-full mt-28">
+      <div className="flex justify-between">
         <div className="left">
-          <p>{discount}</p>
-          <h3>{largeText1}</h3>
-          <h3>{largeText2}</h3>
-          <p>{saleTime}</p>
+          <p className="m-4.5">{discount}</p>
+          <h3 className="font-extrabold text-7xl">{largeText1}</h3>
+          <h3 className="font-extrabold text-7xl">{largeText2}</h3>
+          <p className="m-4.5">{saleTime}</p>
         </div>
         <div className="right">
-          <p>{smallText}</p>
-          <h3>{midText}</h3>
-          <p>{desc}</p>
+          <p className="text-lg">{smallText}</p>
+          <h3 className="font-extrabold text-7xl">{midText}</h3>
+          <p className="text-lg">{desc}</p>
           <Link href={`/product/${product}`}>
             <button type="button">{buttonText}</button>
           </Link>
@@ -36,7 +36,7 @@ const FooterBanner = ({
         <img
           src={urlFor(image)}
           alt={`product-${product}`}
-          className="footer-banner-image"
+          className="-top-1/4 left-1/4 absolute"
         />
       </div>
     </div>
