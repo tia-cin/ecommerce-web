@@ -43,7 +43,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <div className="product-detail-desc">
           <h1>{name}</h1>
-          <div className="reviews">
+          <div className="text-red-500 mt-2.5 flex gap-1 items-center">
             <div>
               <AiFillStar />
               <AiFillStar />
@@ -51,14 +51,14 @@ const ProductDetails = ({ product, products }) => {
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p >(20)</p>
+            <p className="mt-0">(20)</p>
           </div>
           <h4 className="mt-2.5">Details: </h4>
           <p className="mt-2.5">{details}</p>
           <p className="mt-5 font-bold text-2xl text-red-500">${price}</p>
           <div className="flex gap-4 items-center mt-2.5">
             <h3>Quantity:</h3>
-            <p className="p-4 flex">
+            <p className="p-4 flex items-center gap-x-2">
               <span className="text-red-500" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
@@ -68,24 +68,27 @@ const ProductDetails = ({ product, products }) => {
               </span>
             </p>
           </div>
-          <div className="buttons">
+          <div className="flex gap-4">
             <button
               type="button"
-              className="add-to-cart"
+              className="rounded-lg flex gap-7 py-2.5 px-5 border-indigo-600 border mt-10 text-lg font-medium text-indigo-600 cursor-pointer w-200 scale-100 transition-all hover:scale-110"
               onClick={() => onAdd(product, qty)}
             >
               Add to Cart
             </button>
-            <button type="button" className="buy-now" onClick={handleBuyNow}>
+            <button 
+              type="button" 
+              className="rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110" 
+              onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>
         </div>
       </div>
-      <div className="maylike-producta-wrapper">
-        <h2>Recomended Products</h2>
+      <div className="mt-28">
+        <h2 className="text-center m-12 text-indigo-900 text-3xl">Recomended Products</h2>
         <div className="marquee">
-          <div className="maylike-products-container track">
+          <div className="flex justify-center gap-4 mt-5 track">
             {products.map((item, i) => (
               <Product key={i} product={item} />
             ))}
