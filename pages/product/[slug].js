@@ -23,18 +23,18 @@ const ProductDetails = ({ product, products }) => {
     <div>
       <div className="flex text-black gap-10 m-10 mt-14">
         <div>
-          <div className="image-container">
+          <div className="">
             <img
               src={urlFor(image && image[index])}
               alt={name}
-              className="product-detail-image"
+              className="rounded-xl bg-gray-200 w-400 h-400 cursor-pointer transition-all hover:bg-indigo-600"
             />
           </div>
-          <div className="small-images-container">
+          <div className="flex gap-2.5 mt-5">
             {image?.map((img, i) => (
               <img
                 src={urlFor(img)}
-                className={`small-image ${i === index ? "selected-image" : ""}`}
+                className={`rounded-xl w-20 h-20 cursor-pointer  ${i === index ? "bg-indigo-600" : "bg-gray-200"}`}
                 onMouseEnter={() => setIndex(i)}
                 key={i}
               />
@@ -51,19 +51,19 @@ const ProductDetails = ({ product, products }) => {
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p>(20)</p>
+            <p >(20)</p>
           </div>
-          <h4>Details: </h4>
-          <p>{details}</p>
-          <p className="price">${price}</p>
-          <div className="quantity">
+          <h4 className="mt-2.5">Details: </h4>
+          <p className="mt-2.5">{details}</p>
+          <p className="mt-5 font-bold text-2xl text-red-500">${price}</p>
+          <div className="flex gap-4 items-center mt-2.5">
             <h3>Quantity:</h3>
-            <p className="quantity-desc">
-              <span className="minus" onClick={decQty}>
+            <p className="p-4 flex">
+              <span className="text-red-500" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
-              <span className="mun">{qty}</span>
-              <span className="plus" onClick={incQty}>
+              <span className="text-lg">{qty}</span>
+              <span className="text-green-500" onClick={incQty}>
                 <AiOutlinePlus />
               </span>
             </p>
