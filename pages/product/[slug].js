@@ -43,15 +43,15 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <div className="product-detail-desc">
           <h1>{name}</h1>
-          <div className="text-red-500 mt-2.5 flex gap-1 items-center">
-            <div>
+          <div className="text-red-500 mt-2.5 flex items-center">
+            <div className="flex items-center">
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p className="mt-0">(20)</p>
+            <p className="mt-0 text-xs">(20)</p>
           </div>
           <h4 className="mt-2.5">Details: </h4>
           <p className="mt-2.5">{details}</p>
@@ -71,14 +71,14 @@ const ProductDetails = ({ product, products }) => {
           <div className="flex gap-4">
             <button
               type="button"
-              className="rounded-lg flex gap-7 py-2.5 px-5 border-indigo-600 border mt-10 text-lg font-medium text-indigo-600 cursor-pointer w-200 scale-100 transition-all hover:scale-110"
+              className="text-center rounded-lg flex gap-7 py-2.5 px-5 border-indigo-600 border mt-10 text-lg font-medium text-indigo-600 cursor-pointer w-200 scale-100 transition-all hover:scale-110"
               onClick={() => onAdd(product, qty)}
             >
               Add to Cart
             </button>
             <button 
               type="button" 
-              className="rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110" 
+              className="text-center rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110" 
               onClick={handleBuyNow}>
               Buy Now
             </button>
@@ -87,7 +87,7 @@ const ProductDetails = ({ product, products }) => {
       </div>
       <div className="mt-28">
         <h2 className="text-center m-12 text-indigo-900 text-3xl">Recomended Products</h2>
-        <div className="marquee">
+        <div className="relative h-400 w-full overflow-hidden">
           <div className="flex justify-center gap-4 mt-5 track">
             {products.map((item, i) => (
               <Product key={i} product={item} />
