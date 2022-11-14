@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "moccasin-dugong"
-  },
   "api": {
     "projectId": "lhqznqop",
     "dataset": "production"
+  },
+  "project": {
+    "name": "moccasin-dugong"
   },
   "plugins": [
     "@sanity/base",

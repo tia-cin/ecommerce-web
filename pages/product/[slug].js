@@ -21,7 +21,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="product-detail-container">
+      <div className="flex text-black gap-10 m-10 mt-14">
         <div>
           <div className="image-container">
             <img
