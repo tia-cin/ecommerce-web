@@ -52,7 +52,7 @@ const Cart = () => {
           <span className="ml-2.5 text-red-500">({totalQuantities} items)</span>
         </button>
         {cartItems.length < 1 && (
-          <div className="m-10 text-center">
+          <div className="m-10 text-center flex flex-col items-center">
             <AiOutlineShopping size={150} />
             <h3 className="font-semibold text-xl">Your cart is empty</h3>
             <Link href="/">
@@ -70,23 +70,23 @@ const Cart = () => {
                   src={urlFor(item?.image[0])}
                   className="w-1/4 h-1/4"
                 />
-                <div className="flex justify-between">
+                <div className="flex">
                   <div className="w-200 flex-wrap gap-2.5">
                     <h5 className="text-base font-semibold">{item.name}</h5>
                     <h4 className="text-base">${item.price}</h4>
                   </div>
-                  <div className="w-200 flex">
+                  <div className="w-200 flex items-center justify-between">
                     <div>
-                      <p className="flex items-center gap-4">
+                      <p className="flex items-center gap-4 border border-gray-200 p-2">
                         <span
-                          className="text-red-500"
+                          className="text-red-500 cursor-pointer"
                           onClick={() => toggleQuantity(item._id, "dec")}
                         >
                           <AiOutlineMinus />
                         </span>
                         <span className="text-lg">{item.quantity}</span>
                         <span
-                          className="text-green-500"
+                          className="text-green-500 cursor-pointer"
                           onClick={() => toggleQuantity(item._id, "inc")}
                         >
                           <AiOutlinePlus />
