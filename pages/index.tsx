@@ -2,16 +2,18 @@ import React from "react";
 import { Product, FooterBanner, HeroBanner } from "../components";
 import { client } from "../lib/client";
 
-const Home = ({ products, bannerData }) => {
+const Home = ({ products, bannerData }: any) => {
   return (
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <div className="text-center my-10 text-indigo-800">
         <h2 className="text-4xl font-extrabold">Beset Selling Products</h2>
-        <p className="text-base text-gray-600 font-extralight">Speakers of many variations</p>
+        <p className="text-base text-gray-600 font-extralight">
+          Speakers of many variations
+        </p>
       </div>
       <div className="flex flex-wrap justify-center gap-4 mt-5 w-full">
-        {products?.map((p) => (
+        {products?.map((p: any) => (
           <Product key={p._id} product={p} />
         ))}
       </div>

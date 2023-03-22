@@ -8,8 +8,9 @@ import {
 } from "react-icons/ai";
 import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
+import { AnyRecord } from "dns";
 
-const ProductDetails = ({ product, products }) => {
+const ProductDetails = ({ product, products }: any) => {
   const { image, name, details, price } = product;
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const [index, setIndex] = useState(0);
@@ -25,16 +26,18 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <div className="">
             <img
-              src={urlFor(image && image[index])}
+              src={String(urlFor(image && image[index]))}
               alt={name}
               className="rounded-xl bg-gray-200 w-400 h-400 cursor-pointer transition-all hover:bg-indigo-600"
             />
           </div>
           <div className="flex gap-2.5 mt-5">
-            {image?.map((img, i) => (
+            {image?.map((img: any, i: number) => (
               <img
-                src={urlFor(img)}
-                className={`rounded-xl w-20 h-20 cursor-pointer  ${i === index ? "bg-indigo-600" : "bg-gray-200"}`}
+                src={String(urlFor(img))}
+                className={`rounded-xl w-20 h-20 cursor-pointer  ${
+                  i === index ? "bg-indigo-600" : "bg-gray-200"
+                }`}
                 onMouseEnter={() => setIndex(i)}
                 key={i}
               />
@@ -76,20 +79,23 @@ const ProductDetails = ({ product, products }) => {
             >
               Add to Cart
             </button>
-            <button 
-              type="button" 
-              className="text-center rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110" 
-              onClick={handleBuyNow}>
+            <button
+              type="button"
+              className="text-center rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110"
+              onClick={handleBuyNow}
+            >
               Buy Now
             </button>
           </div>
         </div>
       </div>
       <div className="mt-28">
-        <h2 className="text-center m-12 text-indigo-900 text-3xl">Recomended Products</h2>
+        <h2 className="text-center m-12 text-indigo-900 text-3xl">
+          Recomended Products
+        </h2>
         <div className="relative h-400 w-full overflow-hidden">
           <div className="flex justify-center gap-4 mt-5 track">
-            {products.map((item, i) => (
+            {products.map((item: any, i: number) => (
               <Product key={i} product={item} />
             ))}
           </div>
@@ -102,7 +108,7 @@ const ProductDetails = ({ product, products }) => {
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] { slug { current } }`;
   const products = await client.fetch(query);
-  const paths = products.map((product) => ({
+  const paths = products.map((product: any) => ({
     params: {
       slug: product.slug.current,
     },
@@ -114,7 +120,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps = async ({ params: { slug } }: any) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]';
 
