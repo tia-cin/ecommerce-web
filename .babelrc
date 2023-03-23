@@ -1,1 +1,1 @@
-{ "preset": ["next/babel"] }
+{ "preset": ["next/babel", "@babel/preset-react"] }

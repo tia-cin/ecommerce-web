@@ -1,10 +1,11 @@
 import React from "react";
-import type { NextPage, GetServerSideProps } from "next";
+import type { NextPage } from "next";
+import { FooterBanner, HeroBanner, Product } from "../../components";
 
 const Home: NextPage = () => {
   return (
     <>
-      {/* <HeroBanner/> */}
+      <HeroBanner />
       <div className="text-center my-10 text-indigo-800">
         <h2 className="text-4xl font-extrabold">
           Discover the Newest Electronics Trends
@@ -14,11 +15,11 @@ const Home: NextPage = () => {
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-4 mt-5 w-full">
-        {/* {["products1", "product2"].map((p: string) => (
+        {["products1", "product2"].map((p: string) => (
           <Product key={p} />
-        ))} */}
+        ))}
       </div>
-      {/* <FooterBanner  /> */}
+      <FooterBanner />
     </>
   );
 };
