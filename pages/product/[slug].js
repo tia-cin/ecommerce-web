@@ -34,7 +34,9 @@ const ProductDetails = ({ product, products }) => {
             {image?.map((img, i) => (
               <img
                 src={urlFor(img)}
-                className={`rounded-xl w-20 h-20 cursor-pointer  ${i === index ? "bg-indigo-600" : "bg-gray-200"}`}
+                className={`rounded-xl w-20 h-20 cursor-pointer  ${
+                  i === index ? "bg-indigo-600" : "bg-gray-200"
+                }`}
                 onMouseEnter={() => setIndex(i)}
                 key={i}
               />
@@ -76,17 +78,20 @@ const ProductDetails = ({ product, products }) => {
             >
               Add to Cart
             </button>
-            <button 
-              type="button" 
-              className="text-center rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110" 
-              onClick={handleBuyNow}>
+            <button
+              type="button"
+              className="text-center rounded-lg flex gap-7 py-2.5 bg-indigo-600 px-5 mt-10 text-lg font-medium text-white cursor-pointer w-200 scale-100 transition-all hover:scale-110"
+              onClick={handleBuyNow}
+            >
               Buy Now
             </button>
           </div>
         </div>
       </div>
       <div className="mt-28">
-        <h2 className="text-center m-12 text-indigo-900 text-3xl">Recomended Products</h2>
+        <h2 className="text-center m-12 text-indigo-900 text-3xl">
+          Recomended Products
+        </h2>
         <div className="relative h-400 w-full overflow-hidden">
           <div className="flex justify-center gap-4 mt-5 track">
             {products.map((item, i) => (

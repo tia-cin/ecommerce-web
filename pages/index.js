@@ -8,7 +8,9 @@ const Home = ({ products, bannerData }) => {
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <div className="text-center my-10 text-indigo-800">
         <h2 className="text-4xl font-extrabold">Beset Selling Products</h2>
-        <p className="text-base text-gray-600 font-extralight">Speakers of many variations</p>
+        <p className="text-base text-gray-600 font-extralight">
+          Speakers of many variations
+        </p>
       </div>
       <div className="flex flex-wrap justify-center gap-4 mt-5 w-full">
         {products?.map((p) => (
